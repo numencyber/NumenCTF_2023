@@ -19,6 +19,6 @@ library ZKPLibrary {
             return false;
         }
 
-        return (sum == amount) && (challenge * proof.a % 2**128 == proof.c);
+        return (sum == amount) && (challenge * proof.a % 2**128 == proof.c) && (proof.a * proof.b % 2**128 == proof.c);
     }
 }
